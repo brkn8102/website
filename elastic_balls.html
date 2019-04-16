@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  </head>
+    <title>Brandon Knutson | Elastic Balls Simulation</title>
+    <link href='style.css' type='text/css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='vector_operations.js'></script>
+    <script src='animation_tools.js'></script>
+    <script src='elastic_balls.js'></script>
+    <script src='main.js'></script>
+  </head>
+
+  <body>
+    <div class='heading'>
+      <a href='index.html'>
+        <img class='name' src='images/name.jpg'>  
+      </a>
+      <div class='navigation'>
+        <a href='index.html'>Home</a>
+        <a href='sundial.html'>Sundial</a>
+        <a class='pushed' href='elastic_balls.html'>Elastic Balls</a>
+      </div>
+    </div>
+
+    <div id='container'></div>
+    <div id='settings'>
+      SETTINGS <br>
+
+      Number of Balls: <br>
+      <input type='number' id='numberOfBalls' onclick='newNumberOfBalls = true' value=5><br>
+
+      Center of Mass: <br>
+      <label class="switch">
+        <input type='checkbox' onclick='showCenterOfMass = !showCenterOfMass'>
+        <span class="slider round"></span>
+      </label> <br>
+      
+      Gravity: <br>
+      <label class="switch">
+        <input type='checkbox' onclick='ballSystem.gActive = !ballSystem.gActive'>
+        <span class="slider round"></span>
+      </label> <br>
+
+      Attraction: <br>
+      <label class="switch">
+        <input type='checkbox' onclick='ballSystem.fActive = !ballSystem.fActive'>
+        <span class="slider round"></span>
+      </label> <br> <br>
+
+      <button type='button' id='randomize' onclick='randomize()'>Randomize</button>
+
+    </div>
+    <div id='step'></div>
+    <div id='kineticEnergy'></div>
+  </body>  
+</html>

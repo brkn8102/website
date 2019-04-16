@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  color: white;
+  background-color: midnightblue;
+}
+
+img {
+  width: 90%;
+  margin: 20px 5%;
+}
+
+img.name {
+  width: 100%;
+  margin: 0;
+}
+
+div.navigation a {
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  padding: 0 10px;
+  border: 10px solid midnightblue;
+  border-radius: 20px;
+  background-color: white;
+  display: inline-block;
+}
+
+div.navigation a.pushed {
+  border-color: darkorange;
+}
+
+#container {
+  float: left;
+  background-color: black;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 1%;
+}
+
+#settings {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  display: inline-block;
+  background-color: coral;
+  width: 24%;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+input {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  width: 90px;
+  margin: 10px;
+}
+
+p {
+  font-size: 30px;
+  margin: 20px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+button#randomize {
+  font-size: 30px;
+  background-color: green;
+  width: 100%;
+  margin: auto;
+}
